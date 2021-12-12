@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Star Wars</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Details</string>
+    <string name="characters">Characters</string>
+    <string name="favourites">Favourites</string>
+    <string name="details">Details</string>
 </resources>
