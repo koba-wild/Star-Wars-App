@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class Details : Fragment(R.layout.fragment_favourites) {
+class Details : Fragment(R.layout.fragment_details) {
 
 
 }

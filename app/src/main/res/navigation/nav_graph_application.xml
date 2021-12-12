@@ -3,29 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_application"
-    app:startDestination="@id/starWarsList">
+    app:startDestination="@id/charactersList">
 
-    <fragment
-        android:id="@+id/starWarsList"
-        android:name="com.example.starwars.StarWarsList"
-        android:label="@string/characters"
-        tools:layout="@layout/fragment_star_wars_list" >
-        <action
-            android:id="@+id/action_starWarsList_to_details"
-            app:destination="@id/details" />
-    </fragment>
-    <fragment
-        android:id="@+id/details"
-        android:name="com.example.starwars.Details"
-        android:label="@string/details"
-        tools:layout="@layout/fragment_details" />
     <fragment
         android:id="@+id/favourites"
         android:name="com.example.starwars.Favourites"
         android:label="@string/favourites"
-        tools:layout="@layout/fragment_favourites" >
-        <action
-            android:id="@+id/action_favourites_to_details"
-            app:destination="@id/details" />
-    </fragment>
+        tools:layout="@layout/fragment_favourites" />
+    <navigation
+        android:id="@+id/charactersList"
+        app:startDestination="@id/starWarsList">
+        <fragment
+            android:id="@+id/starWarsList"
+            android:name="com.example.starwars.StarWarsList"
+            android:label="@string/characters"
+            tools:layout="@layout/fragment_star_wars_list">
+            <action
+                android:id="@+id/action_starWarsList_to_details"
+                app:destination="@id/details" />
+        </fragment>
+        <fragment
+            android:id="@+id/details"
+            android:name="com.example.starwars.Details"
+            android:label="@string/details"
+            tools:layout="@layout/fragment_details" />
+    </navigation>
 </navigation>
