@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/favourites"
-        android:name="com.example.starwars.Favourites"
+        android:name="com.example.starwars.presentation.Favourites"
         android:label="@string/favourites"
         tools:layout="@layout/fragment_favourites" />
     <navigation
@@ -15,7 +15,7 @@
         app:startDestination="@id/starWarsList">
         <fragment
             android:id="@+id/starWarsList"
-            android:name="com.example.starwars.StarWarsList"
+            android:name="com.example.starwars.presentation.charactersList.StarWarsList"
             android:label="@string/characters"
             tools:layout="@layout/fragment_star_wars_list">
             <action
@@ -24,7 +24,7 @@
         </fragment>
         <fragment
             android:id="@+id/details"
-            android:name="com.example.starwars.Details"
+            android:name="com.example.starwars.presentation.Details"
             android:label="@string/details"
             tools:layout="@layout/fragment_details" />
     </navigation>
