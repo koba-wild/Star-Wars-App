@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.starwars.R
 
-class StarWarsList : Fragment(R.layout.fragment_star_wars_list) {
+class HeroesListFragment : Fragment(R.layout.fragment_star_wars_list) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

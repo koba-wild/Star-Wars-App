@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 
 object Retrofit {
 
-    const val BASE_URL = "https://www.swapi.tech/api/people"
+    const val BASE_URL = "https://www.swapi.tech/api"
 
     fun buildRetrofit(): Retrofit {
         return Retrofit.Builder()

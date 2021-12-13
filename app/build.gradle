@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id "kotlin-parcelize"
 }
 
 android {
@@ -51,7 +52,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.2.1"
 
     /---- Jetpack navigation components ----/
-    def nav_version = "2.4.0-alpha04"
+    def nav_version = "2.4.0-beta02"
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 

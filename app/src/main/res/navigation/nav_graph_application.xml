@@ -15,7 +15,7 @@
         app:startDestination="@id/starWarsList">
         <fragment
             android:id="@+id/starWarsList"
-            android:name="com.example.starwars.presentation.charactersList.StarWarsList"
+            android:name="com.example.starwars.presentation.charactersList.HeroesListFragment"
             android:label="@string/characters"
             tools:layout="@layout/fragment_star_wars_list">
             <action
