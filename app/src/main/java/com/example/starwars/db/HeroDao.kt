@@ -12,7 +12,7 @@ interface HeroDao {
     @Query("DELETE from heroes")
     fun clear()
 
-    @Query("SELECT * FROM heroes ORDER BY uid ASC")
+    @Query("SELECT * FROM heroes")
     fun getAllHeroes(): LiveData<List<HeroTitle>>
 
     @Query("UPDATE heroes SET favourites =:favorite  WHERE uid = :uid")
