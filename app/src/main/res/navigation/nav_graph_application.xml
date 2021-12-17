@@ -26,6 +26,10 @@
             android:id="@+id/details"
             android:name="com.example.starwars.presentation.Details"
             android:label="@string/details"
-            tools:layout="@layout/fragment_details" />
+            tools:layout="@layout/fragment_details" >
+            <argument
+                android:name="uid"
+                app:argType="string" />
+        </fragment>
     </navigation>
 </navigation>

@@ -6,12 +6,13 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.starwars.data.Hero
+import com.example.starwars.data.HeroTitle
 
-@Database(entities = [Hero::class], version = 1,  exportSchema = true)
+@Database(entities = [HeroTitle::class], version = 2,  exportSchema = true)
 @TypeConverters(TypeConverter::class)
 
 abstract class HeroesDatabase : RoomDatabase() {
-    abstract fun dao() : Dao
+    abstract fun heroDao() : HeroDao
 
     companion object {
         @Volatile
