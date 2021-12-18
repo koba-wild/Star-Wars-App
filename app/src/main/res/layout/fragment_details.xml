@@ -1,15 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.Details">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.Details"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/heroImage"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:contentDescription="@string/hero_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/heroName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="24sp"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroImage"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/birthYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Birth Year"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heroName"/>
+
+    <TextView
+        android:id="@+id/eyeColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Eye color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthYear"/>
+
+    <TextView
+        android:id="@+id/hairColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Hair Color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eyeColor"/>
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hairColor"/>
+
+    <TextView
+        android:id="@+id/mass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Mass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"/>
+
+    <TextView
+        android:id="@+id/homeworld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Homeworld"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mass"/>
+
+    <TextView
+        android:id="@+id/films"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin = "20dp"
+        style="@style/TextAppearance.Subtitle"
+        android:text="Films"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeworld"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
