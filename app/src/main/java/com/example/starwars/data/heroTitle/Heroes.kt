@@ -1,4 +1,4 @@
-package com.example.starwars.data
+package com.example.starwars.data.heroTitle
 
 import com.google.gson.annotations.SerializedName
 

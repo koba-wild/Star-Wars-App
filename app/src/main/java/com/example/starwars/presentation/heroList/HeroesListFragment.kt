@@ -1,4 +1,4 @@
-package com.example.starwars.presentation.charactersList
+package com.example.starwars.presentation.heroList
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.starwars.R
-import com.example.starwars.data.Hero
-import com.example.starwars.data.HeroTitle
+import com.example.starwars.data.detailHero.Hero
+import com.example.starwars.data.heroTitle.HeroTitle
 import com.example.starwars.db.StarWarsApplication
 
 class HeroesListFragment : Fragment(R.layout.fragment_star_wars_list), OnHeroClickListener {
@@ -31,9 +31,9 @@ class HeroesListFragment : Fragment(R.layout.fragment_star_wars_list), OnHeroCli
         })
     }
 
-    override fun onHeroClick(hero: HeroTitle, position: Int) {
+    override fun onHeroClick(hero: Hero, position: Int) {
         viewModel.heroesData.observe(viewLifecycleOwner, {
-            val action = HeroesListFragmentDirections.actionStarWarsListToDetails(it[position].uid)
+            val action = HeroesListFragmentDirections.actionStarWarsListToDetails(it[position])
             view?.findNavController()?.navigate(action)
         })
     }

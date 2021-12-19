@@ -5,10 +5,9 @@ import androidx.room.Room
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.starwars.data.Hero
-import com.example.starwars.data.HeroTitle
+import com.example.starwars.data.detailHero.Hero
 
-@Database(entities = [HeroTitle::class], version = 2,  exportSchema = true)
+@Database(entities = [Hero::class], version = 3_2,  exportSchema = true)
 @TypeConverters(TypeConverter::class)
 
 abstract class HeroesDatabase : RoomDatabase() {
@@ -27,6 +26,7 @@ abstract class HeroesDatabase : RoomDatabase() {
                     HeroesDatabase::class.java,
                     "heroes_database"
                 )
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance

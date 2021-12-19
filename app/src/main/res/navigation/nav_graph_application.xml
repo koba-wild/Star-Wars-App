@@ -15,7 +15,7 @@
         app:startDestination="@id/starWarsList">
         <fragment
             android:id="@+id/starWarsList"
-            android:name="com.example.starwars.presentation.charactersList.HeroesListFragment"
+            android:name="com.example.starwars.presentation.heroList.HeroesListFragment"
             android:label="@string/characters"
             tools:layout="@layout/fragment_star_wars_list">
             <action
@@ -24,12 +24,12 @@
         </fragment>
         <fragment
             android:id="@+id/details"
-            android:name="com.example.starwars.presentation.Details"
+            android:name="com.example.starwars.presentation.detailsList.Details"
             android:label="@string/details"
             tools:layout="@layout/fragment_details" >
             <argument
-                android:name="uid"
-                app:argType="string" />
+                android:name="heroArg"
+                app:argType="com.example.starwars.data.detailHero.Hero" />
         </fragment>
     </navigation>
 </navigation>
